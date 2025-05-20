@@ -1,0 +1,32 @@
+@theme inline {
+    /* Primary F1 Brand Colors */
+    --color-f1-red: #FF1801; /* The iconic F1 red */
+    --color-f1-black: #15151e;
+    --color-f1-white: #ffffff;
+
+    /* Official F1 Signal/Status Colors */
+    --color-f1-yellow: #ffde00; /* Yellow flag color */
+    --color-f1-green: #00ce7c; /* Green flag color */
+    --color-f1-purple: #b201e5; /* Purple sector timing color */
+    --color-f1-blue: #1e5bc6; /* Blue flag color */
+    --color-f1-orange: #ff8700; /* Used for warnings */
+
+    /* Team Colors */
+    --color-f1-mercedes: #27F4D2;
+    --color-f1-red-bull: #3671C6;
+    --color-f1-ferrari: #E80020;
+    --color-f1-mclaren: #FF8000;
+    --color-f1-aston-martin: #229971;
+    --color-f1-alpine: #00A1E8;
+    --color-f1-williams: #005aff;
+    --color-f1-haas: #B6BABD;
+    --color-f1-rb: #6692FF;
+    --color-f1-sauber: #52E252;
+
+    /* Tire Compounds */
+    --color-f1-tire-soft: #d80000;
+    --color-f1-tire-medium: #ffd900;
+    --color-f1-tire-hard: #ffffff;
+    --color-f1-tire-intermediate: #4cba5b;
+    --color-f1-tire-wet: #0067ad;
+}
