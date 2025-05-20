@@ -29,6 +29,13 @@ Compete with friends, join private leagues, and climb the global leaderboard.
 
 ---
 
+## 🧩 Data Sources
+
+- 🧪 [f1api.dev](https://f1api.dev/) – for schedule, standings, drivers & constructors  
+- 📡 [live.f1api.dev](https://live.f1api.dev/) – for live timing and event data  
+
+---
+
 ## 👨‍💻 Built With
 
 - ⚛️ [React](https://reactjs.org/) / [Next.js](https://nextjs.org/)  
@@ -45,18 +52,7 @@ Pull requests and feedback are welcome.
 
 ---
 
-## 📌 TODO
-
-- [ ] Authentication & user profiles  
-- [ ] Race schedule integration (F1 API or manual)  
-- [ ] Live results + auto scoring  
-- [ ] League creation & invites  
-- [ ] Admin dashboard for managing races  
-
----
-
 ## 📬 Contact
 
 Have suggestions or want to collaborate?  
 Feel free to open an issue or reach out!
-
