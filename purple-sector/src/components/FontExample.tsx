@@ -25,19 +25,23 @@ export default function FontExample() {
           </div>
         </div>
         
-        <div>
+        <div className={`text-4xl`}>
           <h3 className="text-xl mb-2">Other Fonts</h3>
           <p className="font-geist">This is Geist Sans</p>
           <p className="font-mono">This is Geist Mono</p>
           <p className="font-orbitron">This is Orbitron</p>
+            <p className="font-kh-light">This is KH Interference Light 12</p>
+            <p className="font-kh-regular">This is KH Interference Regular</p>
+            <p className="font-kh-bold">This is KH Interference Bold 12</p>
         </div>
       </div>
+
       
       <div className="mt-8 p-4 border rounded-lg bg-gray-50">
         <p className="formula-medium text-xl">
-          For comparison, here's a mixed example with 
-          <span className="formula-bold"> bold text </span> 
-          and <span className="formula-italic">italic text</span> 
+          For comparison, here's a mixed example with
+          <span className="formula-bold"> bold text </span>
+          and <span className="formula-italic">italic text</span>
           in a single paragraph.
         </p>
       </div>

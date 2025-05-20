@@ -7,10 +7,15 @@
   :root {
     --background: #ffffff;
     --foreground: #171717;
+
     --font-formula-regular: "Formula1-Regular", sans-serif;
     --font-formula-bold: "Formula1-Bold", sans-serif;
     --font-formula-black: "Formula1-Black", sans-serif;
     --font-formula-italic: "Formula1-Italic", sans-serif;
+
+    --font-kh-light: "KHInterference-Light", sans-serif;
+    --font-kh-regular: "KHInterference-Regular", sans-serif;
+    --font-kh-bold: "KHInterference-Bold", sans-serif;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -61,5 +66,22 @@
     font-family: var(--font-formula-italic), sans-serif;
     font-weight: 400;
     font-style: italic;
+  }
+  .font-kh-light {
+    font-family: var(--font-kh-light), sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .font-kh-regular {
+    font-family: var(--font-kh-regular), sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .font-kh-bold {
+    font-family: var(--font-kh-bold), sans-serif;
+    font-weight: 900;
+    font-style: normal;
   }
 }

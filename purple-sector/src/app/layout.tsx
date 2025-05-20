@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { geistSans, geistMono, orbitron, formulaRegular,formulaBold,formulaMedium,formulaItalic } from "@/lib/fonts";
+import { geistSans, geistMono, orbitron, formulaFonts ,khFonts} from "@/lib/fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -18,10 +18,13 @@ export default function RootLayout({
         `}>
         <body
             className={`
-           ${formulaRegular.variable}
-          ${formulaBold.variable}
-          ${formulaMedium.variable}
-          ${formulaItalic.variable}
+           ${formulaFonts.regular.variable}
+          ${formulaFonts.italic.variable}
+          ${formulaFonts.bold.variable}
+          ${formulaFonts.medium.variable}
+           ${khFonts.light.variable} 
+          ${khFonts.regular.variable} 
+        ${khFonts.bold.variable}
          ${geistSans.variable} 
          ${geistMono.variable} 
          ${orbitron.variable} 
