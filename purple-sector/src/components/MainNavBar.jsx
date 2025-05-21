@@ -5,7 +5,7 @@ import AppButton from "@/components/ui/AppButton";
 
 const MainNavBar = () => {
   return (
-    <nav className="w-full flex items-center justify-between px-8 pt-0 mt-0 min-h-0 ">
+    <nav className="w-full flex items-center justify-between px-8 pt-0 mt-0 min-h-0 sticky top-0 bg-bac z-50">
       <Logo />
       <div className="flex space-x-8 text-lg h-full items-start  ">
         <NavButton href="/my-predictions" text="My Predictions" />
