@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function FontExample() {
+const FontExample = () => {
   return (
     <div className="space-y-6 p-8">
       <h2 className="text-2xl font-geist">Font Variants Examples</h2>
@@ -48,3 +48,5 @@ export default function FontExample() {
     </div>
   );
 }
+
+export default FontExample;

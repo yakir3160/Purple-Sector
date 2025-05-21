@@ -1,21 +1,9 @@
 import React from "react";
 
-// צבעים לכל קבוצה לפי שם
-const teamColors: Record<string, string> = {
-  "Red Bull Racing": "#1e41ff",
-  "Mercedes": "#6cd3bf",
-  "Ferrari": "#ed1c24",
-  "McLaren": "#ff8000",
-  "Aston Martin": "#229971",
-  "Alpine": "#2293d1",
-  "Williams": "#37bedd",
-  "RB (Visa Cash App RB)": "#6692ff",
-  "Stake F1 Team Kick Sauber": "#52e252",
-  "Haas": "#b6babd",
-};
+
 
 interface TableProps {
-  data: Array<Record<string, React.ReactNode>>;
+  data: any[];
   title?: string;
 }
 

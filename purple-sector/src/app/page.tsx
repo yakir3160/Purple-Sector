@@ -1,9 +1,7 @@
-import FontExample from "@/components/FontExample";
-import TableDemo from "@/components/TableDemo";
-import LeaderboardTable from "@/components/LeaderboardDemo";
-import TeamsDemo from "@/components/TeamsDemo";
+import FontExample from "@/components/demo/FontExample";
+import TableDemo from "@/components/demo/TableDemo";
 
-export default function Home() {
+const Home = () => {
   return (
     <div className="flex flex-col items-end min-h-screen p-8 pb-20 gap-16 sm:p-20 font-geist">
       <span className={"text-xl font-formula-italic bg-f1-purple "}>
@@ -14,4 +12,6 @@ export default function Home() {
      <FontExample />
     </div>
   );
-}
+};
+
+export default Home;

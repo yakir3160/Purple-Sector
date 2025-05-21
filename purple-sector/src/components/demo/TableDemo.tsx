@@ -1,6 +1,6 @@
-import StyledTable from "@/components/StyledTable";
+import StyledTable from "@/components/ui/StyledTable";
 
-const TableDemo = () => {
+export default function TableDemo() {
   const data = [
     { Name: "Max Verstappen", Flag: "🇳🇱", Team: "Red Bull", Wins: 5, Podiums: 10, Points: 420 },
     { Name: "Lewis Hamilton", Flag: "🇬🇧", Team: "Mercedes", Wins: 6, Podiums: 11, Points: 350 },
@@ -13,5 +13,3 @@ const TableDemo = () => {
     </div>
   );
 }
-
-export default TableDemo;

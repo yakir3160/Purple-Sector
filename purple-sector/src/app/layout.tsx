@@ -18,7 +18,7 @@ export default function RootLayout({
     return (
         <html lang="en">
         <body
-            className={twMerge(`font-formula-regular
+            className={twMerge(` font-formula-regular
            ${formulaFonts.regular.variable}
           ${formulaFonts.italic.variable}
           ${formulaFonts.bold.variable}

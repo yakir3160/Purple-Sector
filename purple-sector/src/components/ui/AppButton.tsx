@@ -6,7 +6,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode;
 }
 
-export default function AppButton({ className = "", children = "Button", ...props }: ButtonProps) {
+const AppButton = ({ className = "", children = "Button", ...props }: ButtonProps) => {
   return (
     <button
       className={twMerge(
@@ -18,4 +18,6 @@ export default function AppButton({ className = "", children = "Button", ...prop
       {children}
     </button>
   );
-}
+};
+
+export default AppButton;
