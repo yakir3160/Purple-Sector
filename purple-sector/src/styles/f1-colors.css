@@ -30,3 +30,14 @@
     --color-f1-tire-intermediate: #4cba5b;
     --color-f1-tire-wet: #0067ad;
 }
+
+.f1-redbull { border-left-color: var(--color-f1-red-bull) !important; }
+.f1-mercedes { border-left-color: var(--color-f1-mercedes) !important; }
+.f1-ferrari { border-left-color: var(--color-f1-ferrari) !important; }
+.f1-mclaren { border-left-color: var(--color-f1-mclaren) !important; }
+.f1-astonmartin { border-left-color: var(--color-f1-aston-martin) !important; }
+.f1-alpine { border-left-color: var(--color-f1-alpine) !important; }
+.f1-williams { border-left-color: var(--color-f1-williams) !important; }
+.f1-haas { border-left-color: var(--color-f1-haas) !important; }
+.f1-rb { border-left-color: var(--color-f1-rb) !important; }
+.f1-sauber { border-left-color: var(--color-f1-sauber) !important; }

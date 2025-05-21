@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { geistSans, geistMono, orbitron, formulaFonts ,khFonts} from "@/lib/fonts";
 import "./globals.css";
+import MainNavBar from "@/components/MainNavBar";
+import { twMerge } from "tailwind-merge";
 
 export const metadata: Metadata = {
     title: "Purple Sector",
@@ -14,10 +16,9 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className={`
-        `}>
+        <html lang="en">
         <body
-            className={`
+            className={twMerge(`font-formula-regular
            ${formulaFonts.regular.variable}
           ${formulaFonts.italic.variable}
           ${formulaFonts.bold.variable}
@@ -28,10 +29,9 @@ export default function RootLayout({
          ${geistSans.variable} 
          ${geistMono.variable} 
          ${orbitron.variable} 
-  
-            
-         antialiased`}
+         antialiased`)}
         >
+        <MainNavBar />
         {children}
         </body>
         </html>

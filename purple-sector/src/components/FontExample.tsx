@@ -13,14 +13,14 @@ export default function FontExample() {
           <div className="text-4xl ">
             <p className="font-formula-regular ">This is FormulaSans Regular (400)</p>
             <p className="font-formula-medium">This is FormulaSans Medium (500)</p>
-            <p className="font-formula-bold ">This is FormulaSans Bold (700)</p>
-            <p className="font-formula-italic">This is FormulaSans Italic</p>
+            <p className="font-formula-bold ">This is FormulaSans Bold (700) 2 </p>
+            <p className="font-formula-italic">This is FormulaSans Italic 124</p>
           </div>
           
           <div className="space-y-2 mt-4">
             <p className="font-formula font-normal">FormulaSans with font-normal</p>
             <p className="font-formula font-medium">FormulaSans with font-medium</p>
-            <p className="font-formula font-bold">FormulaSans with font-bold</p>
+            <p className="font-formula font-bold">FormulaSans with font-bold </p>
             <p className="font-formula italic">FormulaSans with italic</p>
           </div>
         </div>
