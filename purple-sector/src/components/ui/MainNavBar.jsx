@@ -1,21 +1,39 @@
+'use client';
+import { useState } from "react";
 import Link from "next/link";
 import Logo from "@/components/ui/Logo";
 import NavButton from "@/components/ui/NavButton";
 import AppButton from "@/components/ui/AppButton";
+import Sidebar from "@/components/ui/Sidebar";
+import SidebarToggleButton from "@/components/ui/SidebarToggleButton";
 
 const MainNavBar = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
-    <nav className="w-full flex items-center justify-between px-8 fixed top-0 .bg-background bg-white z-50">
+    <nav className="w-full flex items-center justify-between px-8 fixed top-0 bg-background z-50 pb-4">
       <Logo />
-      <div className="flex space-x-8 text-lg h-full items-start  ">
+
+      {/* Desktop navigation */}
+      <div className="hidden md:flex space-x-8 text-lg h-full items-start">
         <NavButton href="/my-predictions" text="My Predictions" />
         <NavButton href="/leaderboard" text="Leaderboard" />
         <NavButton href="/schedule" text="Schedule" />
         <NavButton href="/standings" text="Standings" />
         <Link href="/login">
-          <AppButton className="cursor-pointer border-b-f1-green font-formula-regular">Login</AppButton>
+          <AppButton className="cursor-pointer border-b-f1-green font-formula-regular">
+            Login
+          </AppButton>
         </Link>
       </div>
+
+      {/* Mobile/Tablet sidebar toggle */}
+      <div className="md:hidden">
+        <SidebarToggleButton onClick={() => setSidebarOpen(true)} />
+      </div>
+
+      {/* Sidebar Component */}
+      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
     </nav>
   );
 };

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { geistSans, geistMono, orbitron, formulaFonts ,khFonts} from "@/lib/fonts";
 import "./globals.css";
-import MainNavBar from "@/components/MainNavBar";
+import MainNavBar from "@/components/ui/MainNavBar";
+import MobileNavBar from "@/components/ui/MobileNavBar";
 import { twMerge } from "tailwind-merge";
 
 export const metadata: Metadata = {
@@ -29,9 +30,14 @@ export default function RootLayout({
          ${geistSans.variable} 
          ${geistMono.variable} 
          ${orbitron.variable} 
-         antialiased`)}
+         antialiased `)}
         >
-        <MainNavBar />
+        <div className="hidden md:block">
+          <MainNavBar />
+        </div>
+        <div className="md:hidden">
+          <MobileNavBar />
+        </div>
         {children}
         </body>
         </html>
