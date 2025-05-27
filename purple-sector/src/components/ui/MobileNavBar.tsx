@@ -14,7 +14,7 @@ const MobileNavBar = () => {
     }, []);
 
     return (
-        <header className="w-full fixed top-0 left-0 z-40 bg-background md:hidden pb-0">
+        <header className="w-full fixed top-0 left-0 z-40 bg-background md:hidden pb-3">
             <div className="relative flex items-center justify-center  h-12 w-full">
                 <SidebarToggleButton
                   onClick={() => setSidebarOpen(!sidebarOpen)}
