@@ -56,7 +56,7 @@ const HomeTabs = () => {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto  md:px-4 mobile-full-width" dir="auto">
+    <div className="w-full max-w-4xl mx-auto  md:px-4 mobile-full-width " dir="auto">
       {/* Tab navigation - dir="auto" supports both LTR and RTL languages */}
       <div className="flex justify-between md:justify-start overflow-x-auto border-b border-gray-200 mb-4 no-scrollbar w-full">
         {tabs.map((tab) => (
