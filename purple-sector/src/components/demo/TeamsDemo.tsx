@@ -1,6 +1,6 @@
-import StyledTable from "@/components/ui/StyledTable";
+import StyledTable from "@/components/StyledTable";
 
-export default function TeamsDemo() {
+const TeamsDemo = () => {
   const data = [
     { TeamName: "Red Bull Racing", _color: "f1-redbull", Podiums: 15, Wins: 10, Points: 650 },
     { TeamName: "Mercedes", _color: "f1-mercedes", Podiums: 12, Wins: 7, Points: 590 },
@@ -12,7 +12,7 @@ export default function TeamsDemo() {
     { TeamName: "RB (Visa Cash App RB)", _color: "f1-rb", Podiums: 0, Wins: 0, Points: 95 },
     { TeamName: "Stake F1 Team Kick Sauber", _color: "f1-sauber", Podiums: 0, Wins: 0, Points: 80 },
     { TeamName: "Haas", _color: "f1-haas", Podiums: 0, Wins: 0, Points: 60 },
-  ];
+  ].map(({Points, ...rest}) => ({...rest, Points}));
 
   return (
     <div className="p-8">
@@ -20,3 +20,5 @@ export default function TeamsDemo() {
     </div>
   );
 }
+
+export default TeamsDemo;

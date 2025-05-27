@@ -1,5 +1,5 @@
 import FontExample from "@/components/demo/FontExample";
-import TableDemo from "@/components/demo/TableDemo";
+
 
 const Home = () => {
   return (
