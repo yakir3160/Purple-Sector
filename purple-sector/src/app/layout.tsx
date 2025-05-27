@@ -3,6 +3,7 @@ import { geistSans, geistMono, orbitron, formulaFonts ,khFonts} from "@/lib/font
 import "./globals.css";
 import MainNavBar from "@/components/ui/MainNavBar";
 import MobileNavBar from "@/components/ui/MobileNavBar";
+import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
 import { twMerge } from "tailwind-merge";
 
 export const metadata: Metadata = {
@@ -17,9 +18,9 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="en" className="overflow-x-hidden">
         <body
-            className={twMerge(` font-formula-regular
+            className={twMerge(`font-formula-regular m-0 p-0 overflow-x-hidden
            ${formulaFonts.regular.variable}
           ${formulaFonts.italic.variable}
           ${formulaFonts.bold.variable}
@@ -30,7 +31,7 @@ export default function RootLayout({
          ${geistSans.variable} 
          ${geistMono.variable} 
          ${orbitron.variable} 
-         antialiased `)}
+         antialiased`)}
         >
         <div className="hidden md:block">
           <MainNavBar />
@@ -38,7 +39,11 @@ export default function RootLayout({
         <div className="md:hidden">
           <MobileNavBar />
         </div>
-        {children}
+        <div className="w-full m-0 p-0">
+          {children}
+        </div>
+        {/* Scroll to Top Button - Available on all pages */}
+        <ScrollToTopButton />
         </body>
         </html>
     );

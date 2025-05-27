@@ -10,7 +10,7 @@ const AppButton = ({ className = "", children = "Button", ...props }: ButtonProp
   return (
     <button
       className={twMerge(
-        " px-6 py-3 font-formula-medium border-b-4  border-b-f1-purple bg-f1-black text-white  transition-colors hover:bg-white hover:text-black",
+        "px-4 md:px-6 py-2 md:py-3 min-w-[90px] font-formula-medium text-sm md:text-base border-b-4 border-b-f1-green bg-f1-black text-white transition-colors hover:bg-white hover:text-black",
         className
       )}
       {...props}
