@@ -12,7 +12,7 @@ const SidebarToggleButton: FC<SidebarToggleButtonProps & { isOpen?: boolean }> =
   return (
     <button
       onClick={onClick}
-      className={`p-2 absolute left-4 top-1/2 -translate-y-1/2 z-50  ${className}`}
+      className={`p-2 absolute left-4 top-1/2 -translate-y-1/2 z z-50  ${className}`}
       aria-label={isOpen ? "סגור תפריט" : "פתח תפריט"}
     >
       {isOpen ? < RiMenuUnfold4Line size={28} /> : <RiMenuUnfold3Line size={28} />}

@@ -1,8 +1,23 @@
+'use client';
 import React from 'react';
 
+import SidebarToggleButton from '@/components/ui/SidebarToggleButton';
+import { useState } from 'react';
+
 const FontExample = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
-    <div className="space-y-6 p-8">
+    <div className="space-y-6 p-8 ">
+<button
+        onClick={() => {
+          console.log("Button clicked");
+        }}
+        className="p-2 absolute left-4 top-1/2 -translate-y-1/2 z-50 bg-gray-200 rounded"
+        aria-label={sidebarOpen ? "Close sidebar" : "Open sidebar"}
+      >
+      hey  
+      </button>
       <h2 className="text-2xl font-geist">Font Variants Examples</h2>
       
       <div className="space-y-6">
