@@ -10,7 +10,7 @@ interface LogoProps {
 const Logo: FC<LogoProps> = ({ className = '' }) => {
 
   const { showTiming, timingValue } = useF1TimingAnimation({ 
-    repeatInterval: 8000
+    repeatInterval: 10000
   });
 
   return (

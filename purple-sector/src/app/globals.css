@@ -245,28 +245,19 @@
       opacity: 1; 
     }
     100% { 
-      transform: translateY(-25px);
+      transform: translateY(-30px);
       opacity: 0; 
     }
   }
 
   .f1-timing-animation {
-    animation: timingPulse 0.8s infinite, slideUpAndFade 1s ease-out forwards;
+    animation: timingPulse 1s infinite, slideUpAndFade 1s ease-in-out forwards;
     display: inline-block;
-    font-family: var(--font-formula-regular), sans-serif;
-    font-weight: normal;
-    letter-spacing: 0.02em;
-    text-shadow: 0 0 1px var(--color-f1-green), 0 0 1px rgba(0, 196, 22, 0.3);
-    position: absolute;
   }
   
   .f1-timing-animation-replace {
-    animation: timingPulse 0.8s infinite, slideUpComplete 1.75s ease-in-out forwards;
+    animation: timingPulse 0.8s infinite, slideUpComplete 1.8s ease-in-out forwards;
     display: inline-block;
-    font-family: var(--font-formula-regular), sans-serif;
-    font-weight: normal;
-    letter-spacing: 0.02em;
-    text-shadow: 0 0 1px var(--color-f1-green), 0 0 1px rgba(0, 196, 22, 0.3);
   }
 
   /* Make sure the text doesn't jump during animation */
@@ -281,4 +272,6 @@
     position: relative;
     min-height: 2.5rem;
   }
+
+
 }
