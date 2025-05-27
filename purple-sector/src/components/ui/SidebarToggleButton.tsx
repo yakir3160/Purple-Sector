@@ -16,7 +16,7 @@ const SidebarToggleButton: FC<SidebarToggleButtonProps & { isOpen?: boolean }> =
       aria-label={isOpen ? "סגור תפריט" : "פתח תפריט"}
     >
       <RiMenuUnfold3Line 
-        size={28} 
+        size={32} 
         className={`md:w-8 md:h-8 transition-transform duration-300 ${isOpen ? '-rotate-180' : ''}`} 
       />
     </button>

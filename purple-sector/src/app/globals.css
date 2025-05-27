@@ -206,22 +206,17 @@
   }
   
   /* F1 Timing Animation Styles */
-  @keyframes timingPulse {
-    0% { opacity: 0.85; }
-    50% { opacity: 1; }
-    100% { opacity: 0.85; }
-  }
-  
+
   @keyframes slideUpAndFade {
     0% { 
       transform: translateY(10px);
       opacity: 0; 
     }
-    15% { 
+    5% { 
       transform: translateY(0);
       opacity: 1; 
     }
-    85% {
+    90% {
       transform: translateY(0);
       opacity: 1;
     }
@@ -236,11 +231,11 @@
       transform: translateY(20px);
       opacity: 0; 
     }
-    20% { 
+    5% { 
       transform: translateY(0);
       opacity: 1; 
     }
-    80% { 
+    90% { 
       transform: translateY(0);
       opacity: 1; 
     }
@@ -251,12 +246,12 @@
   }
 
   .f1-timing-animation {
-    animation: timingPulse 1s infinite, slideUpAndFade 1s ease-in-out forwards;
+    animation: slideUpAndFade 3.5s ease-in-out forwards;
     display: inline-block;
   }
   
   .f1-timing-animation-replace {
-    animation: timingPulse 0.8s infinite, slideUpComplete 1.8s ease-in-out forwards;
+    animation: slideUpComplete 3.5s ease-in-out forwards;
     display: inline-block;
   }
 

@@ -19,10 +19,10 @@ export function useF1TimingAnimation({ repeatInterval = 0 } = {}) {
       setTimingValue(generateRandomTiming());
       setTimeout(() => {
         setShowTiming(false);
-      }, 1750); 
+      }, 3400); 
     };
     runAnimationSequence();
-    const intervalId = setInterval(runAnimationSequence, repeatInterval > 0 ? repeatInterval : 5000); // Increased interval for smoother transitions
+    const intervalId = setInterval(runAnimationSequence, repeatInterval > 0 ? repeatInterval : 6000); // Increased interval to allow animation to complete
     return () => clearInterval(intervalId);
   }, [repeatInterval]);
 

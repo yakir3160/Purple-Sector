@@ -23,8 +23,8 @@ const Sidebar: FC<SidebarProps> = ({ isOpen, onClose }) => {
           aria-hidden="true"
         />
       )}
-      
-      <aside className={`fixed top-0 left-0 h-full z-40 bg-white shadow-lg md:hidden transition-transform duration-300 ${isOpen ? "translate-x-0" : "-translate-x-full"} w-3/5`}>
+
+      <aside className={`fixed top-0 left-0 h-full z-40 bg-background shadow-lg md:hidden transition-transform duration-300 ${isOpen ? "translate-x-0" : "-translate-x-full"} w-3/5`}>
         <div className="flex flex-col p-3 mt-4">
           {/* Close button at top */}
           <button 
