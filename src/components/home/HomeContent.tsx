@@ -2,8 +2,15 @@
 
 import { FC } from 'react';
 import AppButton from '@/components/ui/AppButton';
+import { useTabContext } from '@/contexts/TabContext';
 
 const HomeContent: FC = () => {
+  const { setActiveTab } = useTabContext();
+
+  const goToPredictionsTab = () => {
+    setActiveTab('predictions');
+  };
+
   return (
     <div className="flex flex-col items-center w-full px-0 md:px-2">
       <h2 className="text-2xl font-formula-bold mb-4 text-center">Welcome to Purple Sector</h2>
@@ -15,7 +22,7 @@ const HomeContent: FC = () => {
             <p className="text-lg font-formula-medium">Monaco Grand Prix</p>
             <p className="text-sm text-gray-600">May 30, 2025</p>
           </div>
-          <AppButton className="font-formula-bold">Make Predictions</AppButton>
+          <AppButton onClick={goToPredictionsTab} className="font-formula-bold">Make Predictions</AppButton>
         </div>
       </div>
       
