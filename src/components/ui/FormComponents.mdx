@@ -1,0 +1,140 @@
+# Form Component System Documentation
+
+This document provides an overview of the form component system we've built for Purple Sector.
+
+## Component Overview
+
+### Basic Components
+
+1. **FormField** - A versatile input field that supports:
+   - Regular text inputs
+   - Email inputs 
+   - Password inputs
+   - Number inputs
+   - Textarea inputs
+   - Select dropdowns
+
+2. **CheckboxField** - A checkbox input with label
+
+3. **RadioGroupField** - A group of radio buttons with vertical or horizontal layout
+
+4. **FileUploadField** - A file upload component with validation and preview support
+
+5. **ErrorMessage** - A component for displaying validation errors with fixed height
+
+### Layout Components
+
+1. **FormContainer** - A wrapper component for forms with title support
+
+2. **FormRow** - A component for displaying multiple fields in a row (responsive)
+
+### Utility Functions
+
+The `FormUtils` object provides the following helper functions:
+
+1. `getFieldProps` - Returns props for standard input fields
+2. `getCheckboxProps` - Returns props for checkbox fields
+3. `getTextareaProps` - Returns props for textarea fields
+4. `getSelectProps` - Returns props for select fields
+5. `getRadioGroupProps` - Returns props for radio group fields
+6. `getFileUploadProps` - Returns props for file upload fields
+7. `getTouchedErrors` - Returns all touched fields with errors
+8. `setAllFieldsTouched` - Sets all fields as touched (useful for showing all errors)
+
+## Usage Examples
+
+### Basic Input Field
+
+```tsx
+<FormField
+  {...FormUtils.getFieldProps(formik, 'email')}
+  label="Email"
+  type="email"
+  placeholder="Your email address"
+/>
+```
+
+### Select Dropdown
+
+```tsx
+<FormField
+  {...FormUtils.getSelectProps(formik, 'country', countryOptions)}
+  label="Country"
+/>
+```
+
+### Checkbox Field
+
+```tsx
+<CheckboxField
+  {...FormUtils.getCheckboxProps(formik, 'agreeToTerms')}
+  label="I agree to the terms and conditions"
+/>
+```
+
+### Radio Group
+
+```tsx
+<RadioGroupField
+  {...FormUtils.getRadioGroupProps(formik, 'gender', genderOptions)}
+  label="Gender"
+/>
+```
+
+### File Upload
+
+```tsx
+<FileUploadField
+  {...FormUtils.getFileUploadProps(formik, 'profilePicture', 'image/*', 5 * 1024 * 1024, true)}
+  label="Profile Picture"
+/>
+```
+
+### Form Row (Multiple Fields in One Row)
+
+```tsx
+<FormRow>
+  <FormField
+    {...FormUtils.getFieldProps(formik, 'firstName')}
+    label="First Name"
+  />
+  
+  <FormField
+    {...FormUtils.getFieldProps(formik, 'lastName')}
+    label="Last Name"
+  />
+</FormRow>
+```
+
+## Complete Form Example
+
+For a complete working example, see:
+- `ProfileForm.tsx` - A comprehensive profile form with all field types
+- `LoginForm.tsx` - A simple login form
+- `RegisterForm.tsx` - A registration form with validation
+
+## Form Validation
+
+All forms use Yup validation schema for field validation. Example:
+
+```tsx
+const ValidationSchema = Yup.object().shape({
+  email: Yup.string()
+    .email('Invalid email address')
+    .required('Email is required'),
+  password: Yup.string()
+    .min(8, 'Password must be at least 8 characters')
+    .required('Password is required'),
+});
+```
+
+## Styling
+
+All components use Tailwind CSS for styling. The form components follow these styling principles:
+
+- Consistent padding and spacing
+- Responsive layout
+- Visual feedback for validation errors
+- Fixed height error message containers to prevent layout jumping
+- Accessible color contrast
+- Proper focus states for keyboard navigation

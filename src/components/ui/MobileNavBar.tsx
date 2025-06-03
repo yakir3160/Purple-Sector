@@ -4,6 +4,10 @@ import { useState, useEffect } from "react";
 import Sidebar from "@/components/ui/Sidebar";
 import Logo from "@/components/ui/Logo";
 import SidebarToggleButton from "@/components/ui/SidebarToggleButton";
+import { MdAccountBox } from "react-icons/md";
+import { App } from "antd";
+import AppButton from "./AppButton";
+import Link from "next/link";
 
 const MobileNavBar = () => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -14,13 +18,20 @@ const MobileNavBar = () => {
     }, []);
 
     return (
-        <header className="w-full fixed top-0 left-0 z-40 bg-background md:hidden pb-3">
-            <div className="relative flex items-center justify-center  h-12 w-full">
+        <header className="w-full fixed top-0 left-0 z-40 bg-background md:hidden py-3">
+            <div className="relative flex items-center justify-around h-14 w-full ">
                 <SidebarToggleButton
                   onClick={() => setSidebarOpen(!sidebarOpen)}
                   isOpen={sidebarOpen}
                 />
-                <Logo/>
+                <Logo />
+                <Link href="/profile">
+                  <AppButton
+                    className="cursor-pointer min-w-fit"
+                  >
+                    <MdAccountBox size={24} />
+                  </AppButton>
+                </Link>
             </div>
             {mounted && <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />}
         </header>

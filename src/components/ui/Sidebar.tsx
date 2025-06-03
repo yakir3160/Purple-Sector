@@ -41,13 +41,7 @@ const Sidebar: FC<SidebarProps> = ({ isOpen, onClose }) => {
           <NavButton href="/leaderboard" text="Leaderboard" onClick={onClose} className="text-sm py-2" />
           <NavButton href="/schedule" text="Schedule" onClick={onClose} className="text-sm py-2" />
           <NavButton href="/standings" text="Standings" onClick={onClose} className="text-sm py-2" />
-          <div className="mt-2">
-            <Link href="/login" onClick={onClose} className="block">
-              <AppButton className="cursor-pointer border-b-f1-green font-formula-regular text-sm px-4 py-2 w-full">
-                Login
-              </AppButton>
-            </Link>
-          </div>
+          
         </div>
       </aside>
     </>
