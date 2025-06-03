@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { geistSans, geistMono, orbitron, formulaFonts ,khFonts} from "@/lib/fonts";
 import "./globals.css";
-import MainNavBar from "@/components/ui/MainNavBar";
-import MobileNavBar from "@/components/ui/MobileNavBar";
-import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
+import MainNavBar from "@/components/navigation/MainNavBar";
+import MobileNavBar from "@/components/navigation/MobileNavBar";
+import ScrollToTopButton from "@/components/layout/ScrollToTopButton";
 import { twMerge } from "tailwind-merge";
+import { AuthProvider } from "@/contexts/AuthContext";
 
 export const metadata: Metadata = {
     title: "Purple Sector",
@@ -33,17 +34,18 @@ export default function RootLayout({
          ${orbitron.variable} 
          antialiased`)}
         >
-        <div className="hidden md:block">
-          <MainNavBar />
-        </div>
-        <div className="md:hidden">
-          <MobileNavBar />
-        </div>
-        <div className="w-full m-0 p-0">
-          {children}
-        </div>
-        {/* Scroll to Top Button - Available on all pages */}
-        <ScrollToTopButton />
+        <AuthProvider>
+          <div className="hidden md:block">
+            <MainNavBar />
+          </div>
+          <div className="md:hidden">
+            <MobileNavBar />
+          </div>
+          <div className="w-full m-0 p-0 mt-16 md:mt-20">
+            {children}
+          </div>
+          <ScrollToTopButton />
+        </AuthProvider>
         </body>
         </html>
     );
