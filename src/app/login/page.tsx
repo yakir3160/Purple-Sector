@@ -10,7 +10,7 @@ export default function LoginPage() {
   const [activeTab, setActiveTab] = useState<'login' | 'register'>('login');
 
   return (
-    <div className="min-h-screen flex items-start justify-center bg-background px-4 py-10 sm:px-6 lg:px-8">
+    <div className="min-h-[90vh] flex items-start md:items-center justify-center bg-background px-4 py-10 md:py-0 sm:px-6 lg:px-8 h-fit">
       <ToastContainer position="top-center" autoClose={3000} />
       <div className="rounded-lg shadow-lg max-w-md w-full bg-white overflow-hidden transition-all duration-300 ease-in-out opacity-100">
         {/* Tab Navigation */}
