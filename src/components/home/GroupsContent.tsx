@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState } from 'react';
-import AppButton from '@/components/ui/AppButton';
+import AppButton from '@/components/common/AppButton';
 
 type Group = {
   id: number;

@@ -5,7 +5,6 @@ import MainNavBar from "@/components/navigation/MainNavBar";
 import MobileNavBar from "@/components/navigation/MobileNavBar";
 import ScrollToTopButton from "@/components/layout/ScrollToTopButton";
 import { twMerge } from "tailwind-merge";
-import { AuthProvider } from "@/contexts/AuthContext";
 
 export const metadata: Metadata = {
     title: "Purple Sector",
@@ -34,7 +33,6 @@ export default function RootLayout({
          ${orbitron.variable} 
          antialiased`)}
         >
-        <AuthProvider>
           <div className="hidden md:block">
             <MainNavBar />
           </div>
@@ -45,7 +43,6 @@ export default function RootLayout({
             {children}
           </div>
           <ScrollToTopButton />
-        </AuthProvider>
         </body>
         </html>
     );

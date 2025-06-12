@@ -2,7 +2,7 @@
 
 import { FC } from 'react';
 import Link from 'next/link';
-import AppButton from '@/components/ui/AppButton';
+import AppButton from '@/components/common/AppButton';
 
 type User = {
   id: number;

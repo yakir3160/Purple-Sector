@@ -1,7 +1,7 @@
 'use client';
 
 import { FC } from 'react';
-import AppButton from '@/components/ui/AppButton';
+import AppButton from '@/components/common/AppButton';
 
 const MyPredictionsContent: FC = () => {
   const upcomingPredictions = [
